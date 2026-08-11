@@ -32,7 +32,7 @@ O sistema opera através de 6 estágios críticos para garantir a integridade fi
 
 ##  Estrutura e Mapeamento Arquitetural
 
-![Arquitetura do Sistema](docs/architecture/architecture-diagram.jpg)
+![Arquitetura do Sistema](docs/architecture/architecture-diagram.png)
 
 O código está organizado seguindo rigorosamente os princípios de **Clean Architecture** e **Hexagonal Architecture**:
 
