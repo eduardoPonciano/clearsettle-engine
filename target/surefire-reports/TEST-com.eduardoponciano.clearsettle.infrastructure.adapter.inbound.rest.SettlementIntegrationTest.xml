@@ -1,0 +1,803 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.eduardoponciano.clearsettle.infrastructure.adapter.inbound.rest.SettlementIntegrationTest" time="46.49" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="21"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Usuario\Downloads\clearsettle-engine\target\test-classes;C:\Users\Usuario\Downloads\clearsettle-engine\target\classes;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.2\spring-boot-starter-web-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.2\spring-boot-starter-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.2\spring-boot-starter-logging-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\Usuario\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\Usuario\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\Usuario\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Usuario\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.2\spring-boot-starter-json-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.2\spring-boot-starter-tomcat-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.26\tomcat-embed-core-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.26\tomcat-embed-websocket-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-web\6.1.11\spring-web-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-beans\6.1.11\spring-beans-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-webmvc\6.1.11\spring-webmvc-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-aop\6.1.11\spring-aop-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-expression\6.1.11\spring-expression-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.2\spring-boot-starter-data-jpa-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.2\spring-boot-starter-aop-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.2\spring-boot-starter-jdbc-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-jdbc\6.1.11\spring-jdbc-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\hibernate\orm\hibernate-core\6.5.2.Final\hibernate-core-6.5.2.Final.jar;C:\Users\Usuario\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Usuario\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Usuario\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Usuario\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Usuario\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Usuario\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Usuario\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Usuario\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Usuario\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Usuario\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-jpa\3.3.2\spring-data-jpa-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-commons\3.3.2\spring-data-commons-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-orm\6.1.11\spring-orm-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-aspects\6.1.11\spring-aspects-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb\3.3.2\spring-boot-starter-data-mongodb-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\mongodb\mongodb-driver-sync\5.0.1\mongodb-driver-sync-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\bson\5.0.1\bson-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\mongodb-driver-core\5.0.1\mongodb-driver-core-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\bson-record-codec\5.0.1\bson-record-codec-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-mongodb\4.3.2\spring-data-mongodb-4.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\kafka\spring-kafka\3.2.2\spring-kafka-3.2.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-context\6.1.11\spring-context-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-messaging\6.1.11\spring-messaging-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-tx\6.1.11\spring-tx-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\retry\spring-retry\2.0.7\spring-retry-2.0.7.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\github\luben\zstd-jni\1.5.6-3\zstd-jni-1.5.6-3.jar;C:\Users\Usuario\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\Usuario\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-observation\1.13.2\micrometer-observation-1.13.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-commons\1.13.2\micrometer-commons-1.13.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.2\spring-boot-starter-validation-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.26\tomcat-embed-el-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Usuario\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Usuario\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Usuario\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.3.2\spring-boot-starter-actuator-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.3.2\spring-boot-actuator-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-actuator\3.3.2\spring-boot-actuator-3.3.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-jakarta9\1.13.2\micrometer-jakarta9-1.13.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-core\1.13.2\micrometer-core-1.13.2.jar;C:\Users\Usuario\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\Usuario\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.2\spring-boot-starter-test-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-test\3.3.2\spring-boot-test-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.2\spring-boot-test-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Usuario\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Usuario\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Usuario\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Usuario\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Usuario\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Usuario\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\Usuario\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\Usuario\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Usuario\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.18\byte-buddy-agent-1.14.18.jar;C:\Users\Usuario\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Usuario\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\Usuario\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Usuario\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-core\6.1.11\spring-core-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-jcl\6.1.11\spring-jcl-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-test\6.1.11\spring-test-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-testcontainers\3.3.2\spring-boot-testcontainers-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.2\spring-boot-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\testcontainers\1.21.4\testcontainers-1.21.4.jar;C:\Users\Usuario\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Usuario\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Usuario\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Usuario\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Usuario\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-api\3.4.2\docker-java-api-3.4.2.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.2\docker-java-transport-zerodep-3.4.2.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-transport\3.4.2\docker-java-transport-3.4.2.jar;C:\Users\Usuario\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\kafka\spring-kafka-test\3.2.2\spring-kafka-test-3.2.2.jar;C:\Users\Usuario\.m2\repository\org\apache\zookeeper\zookeeper\3.8.4\zookeeper-3.8.4.jar;C:\Users\Usuario\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.4\zookeeper-jute-3.8.4.jar;C:\Users\Usuario\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-handler\4.1.111.Final\netty-handler-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-common\4.1.111.Final\netty-common-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-resolver\4.1.111.Final\netty-resolver-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-buffer\4.1.111.Final\netty-buffer-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport\4.1.111.Final\netty-transport-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.111.Final\netty-transport-native-unix-common-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-codec\4.1.111.Final\netty-codec-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-native-epoll\4.1.111.Final\netty-transport-native-epoll-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.111.Final\netty-transport-classes-epoll-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;C:\Users\Usuario\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\Usuario\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-metadata\3.7.1\kafka-metadata-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-raft\3.7.1\kafka-raft-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server-common\3.7.1\kafka-server-common-3.7.1.jar;C:\Users\Usuario\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Usuario\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server-common\3.7.1\kafka-server-common-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.7.1\kafka-streams-test-utils-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-streams\3.7.1\kafka-streams-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka_2.13\3.7.1\kafka_2.13-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.7.1\kafka-group-coordinator-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-storage-api\3.7.1\kafka-storage-api-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-tools-api\3.7.1\kafka-tools-api-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-storage\3.7.1\kafka-storage-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\Usuario\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server\3.7.1\kafka-server-3.7.1.jar;C:\Users\Usuario\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\Usuario\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\Usuario\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\Usuario\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\Usuario\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.17.2\jackson-module-scala_2.13-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.17.2\jackson-dataformat-csv-2.17.2.jar;C:\Users\Usuario\.m2\repository\org\bitbucket\b_c\jose4j\0.9.4\jose4j-0.9.4.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\scala-reflect\2.13.12\scala-reflect-2.13.12.jar;C:\Users\Usuario\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\Usuario\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.12.1\metrics-core-4.1.12.1.jar;C:\Users\Usuario\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka_2.13\3.7.1\kafka_2.13-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.3\junit-platform-launcher-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\junit-jupiter\1.21.4\junit-jupiter-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\postgresql\1.21.4\postgresql-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\jdbc\1.21.4\jdbc-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\database-commons\1.21.4\database-commons-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\mongodb\1.21.4\mongodb-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\kafka\1.21.4\kafka-1.21.4.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="catalina.useNaming" value="false"/>
+    <property name="user.timezone" value="America/Sao_Paulo"/>
+    <property name="org.jboss.logging.provider" value="slf4j"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="21"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BR"/>
+    <property name="sun.boot.library.path" value="C:\Users\Usuario\Downloads\jdk\jdk-21.0.9\bin"/>
+    <property name="sun.java.command" value="C:\Users\Usuario\AppData\Local\Temp\surefire6557579291562760160\surefirebooter-20260811132216701_3.jar C:\Users\Usuario\AppData\Local\Temp\surefire6557579291562760160 2026-08-11T13-22-16_470-jvmRun1 surefire-20260811132216701_1tmp surefire_0-20260811132216701_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Usuario\Downloads\clearsettle-engine\target\test-classes;C:\Users\Usuario\Downloads\clearsettle-engine\target\classes;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.3.2\spring-boot-starter-web-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter\3.3.2\spring-boot-starter-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot\3.3.2\spring-boot-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.3.2\spring-boot-starter-logging-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.23.1\log4j-to-slf4j-2.23.1.jar;C:\Users\Usuario\.m2\repository\org\apache\logging\log4j\log4j-api\2.23.1\log4j-api-2.23.1.jar;C:\Users\Usuario\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\Usuario\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\Usuario\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.3.2\spring-boot-starter-json-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.17.2\jackson-databind-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.17.2\jackson-annotations-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.17.2\jackson-core-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.17.2\jackson-datatype-jdk8-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.17.2\jackson-datatype-jsr310-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.17.2\jackson-module-parameter-names-2.17.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.3.2\spring-boot-starter-tomcat-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.26\tomcat-embed-core-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.26\tomcat-embed-websocket-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-web\6.1.11\spring-web-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-beans\6.1.11\spring-beans-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-webmvc\6.1.11\spring-webmvc-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-aop\6.1.11\spring-aop-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-expression\6.1.11\spring-expression-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.3.2\spring-boot-starter-data-jpa-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.3.2\spring-boot-starter-aop-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\aspectj\aspectjweaver\1.9.22.1\aspectjweaver-1.9.22.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.3.2\spring-boot-starter-jdbc-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\zaxxer\HikariCP\5.1.0\HikariCP-5.1.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-jdbc\6.1.11\spring-jdbc-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\hibernate\orm\hibernate-core\6.5.2.Final\hibernate-core-6.5.2.Final.jar;C:\Users\Usuario\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\Usuario\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\Usuario\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\Usuario\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\Usuario\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\classmate\1.7.0\classmate-1.7.0.jar;C:\Users\Usuario\.m2\repository\net\bytebuddy\byte-buddy\1.14.18\byte-buddy-1.14.18.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\Usuario\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\Usuario\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\Usuario\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\Usuario\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\Usuario\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-jpa\3.3.2\spring-data-jpa-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-commons\3.3.2\spring-data-commons-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-orm\6.1.11\spring-orm-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-aspects\6.1.11\spring-aspects-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-data-mongodb\3.3.2\spring-boot-starter-data-mongodb-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\mongodb\mongodb-driver-sync\5.0.1\mongodb-driver-sync-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\bson\5.0.1\bson-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\mongodb-driver-core\5.0.1\mongodb-driver-core-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\mongodb\bson-record-codec\5.0.1\bson-record-codec-5.0.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\data\spring-data-mongodb\4.3.2\spring-data-mongodb-4.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\kafka\spring-kafka\3.2.2\spring-kafka-3.2.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-context\6.1.11\spring-context-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-messaging\6.1.11\spring-messaging-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-tx\6.1.11\spring-tx-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\retry\spring-retry\2.0.7\spring-retry-2.0.7.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\github\luben\zstd-jni\1.5.6-3\zstd-jni-1.5.6-3.jar;C:\Users\Usuario\.m2\repository\org\lz4\lz4-java\1.8.0\lz4-java-1.8.0.jar;C:\Users\Usuario\.m2\repository\org\xerial\snappy\snappy-java\1.1.10.5\snappy-java-1.1.10.5.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-observation\1.13.2\micrometer-observation-1.13.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-commons\1.13.2\micrometer-commons-1.13.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.3.2\spring-boot-starter-validation-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.26\tomcat-embed-el-10.1.26.jar;C:\Users\Usuario\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\Usuario\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\Usuario\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Usuario\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.3.2\spring-boot-starter-actuator-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.3.2\spring-boot-actuator-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-actuator\3.3.2\spring-boot-actuator-3.3.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-jakarta9\1.13.2\micrometer-jakarta9-1.13.2.jar;C:\Users\Usuario\.m2\repository\io\micrometer\micrometer-core\1.13.2\micrometer-core-1.13.2.jar;C:\Users\Usuario\.m2\repository\org\hdrhistogram\HdrHistogram\2.2.2\HdrHistogram-2.2.2.jar;C:\Users\Usuario\.m2\repository\org\latencyutils\LatencyUtils\2.0.3\LatencyUtils-2.0.3.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-starter-test\3.3.2\spring-boot-starter-test-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-test\3.3.2\spring-boot-test-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-test-autoconfigure\3.3.2\spring-boot-test-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\com\jayway\jsonpath\json-path\2.9.0\json-path-2.9.0.jar;C:\Users\Usuario\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\Usuario\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\Usuario\.m2\repository\net\minidev\json-smart\2.5.1\json-smart-2.5.1.jar;C:\Users\Usuario\.m2\repository\net\minidev\accessors-smart\2.5.1\accessors-smart-2.5.1.jar;C:\Users\Usuario\.m2\repository\org\ow2\asm\asm\9.6\asm-9.6.jar;C:\Users\Usuario\.m2\repository\org\assertj\assertj-core\3.25.3\assertj-core-3.25.3.jar;C:\Users\Usuario\.m2\repository\org\awaitility\awaitility\4.2.1\awaitility-4.2.1.jar;C:\Users\Usuario\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.3\junit-jupiter-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.3\junit-jupiter-params-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.3\junit-jupiter-engine-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Usuario\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.18\byte-buddy-agent-1.14.18.jar;C:\Users\Usuario\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Usuario\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\Usuario\.m2\repository\org\skyscreamer\jsonassert\1.5.3\jsonassert-1.5.3.jar;C:\Users\Usuario\.m2\repository\com\vaadin\external\google\android-json\0.0.20131108.vaadin1\android-json-0.0.20131108.vaadin1.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-core\6.1.11\spring-core-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-jcl\6.1.11\spring-jcl-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\springframework\spring-test\6.1.11\spring-test-6.1.11.jar;C:\Users\Usuario\.m2\repository\org\xmlunit\xmlunit-core\2.9.1\xmlunit-core-2.9.1.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-testcontainers\3.3.2\spring-boot-testcontainers-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.3.2\spring-boot-autoconfigure-3.3.2.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\testcontainers\1.21.4\testcontainers-1.21.4.jar;C:\Users\Usuario\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Usuario\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar;C:\Users\Usuario\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Usuario\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Usuario\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-api\3.4.2\docker-java-api-3.4.2.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.2\docker-java-transport-zerodep-3.4.2.jar;C:\Users\Usuario\.m2\repository\com\github\docker-java\docker-java-transport\3.4.2\docker-java-transport-3.4.2.jar;C:\Users\Usuario\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Usuario\.m2\repository\org\springframework\kafka\spring-kafka-test\3.2.2\spring-kafka-test-3.2.2.jar;C:\Users\Usuario\.m2\repository\org\apache\zookeeper\zookeeper\3.8.4\zookeeper-3.8.4.jar;C:\Users\Usuario\.m2\repository\org\apache\zookeeper\zookeeper-jute\3.8.4\zookeeper-jute-3.8.4.jar;C:\Users\Usuario\.m2\repository\org\apache\yetus\audience-annotations\0.12.0\audience-annotations-0.12.0.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-handler\4.1.111.Final\netty-handler-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-common\4.1.111.Final\netty-common-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-resolver\4.1.111.Final\netty-resolver-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-buffer\4.1.111.Final\netty-buffer-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport\4.1.111.Final\netty-transport-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.111.Final\netty-transport-native-unix-common-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-codec\4.1.111.Final\netty-codec-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-native-epoll\4.1.111.Final\netty-transport-native-epoll-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\io\netty\netty-transport-classes-epoll\4.1.111.Final\netty-transport-classes-epoll-4.1.111.Final.jar;C:\Users\Usuario\.m2\repository\ch\qos\logback\logback-core\1.5.6\logback-core-1.5.6.jar;C:\Users\Usuario\.m2\repository\ch\qos\logback\logback-classic\1.5.6\logback-classic-1.5.6.jar;C:\Users\Usuario\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-clients\3.7.1\kafka-clients-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-metadata\3.7.1\kafka-metadata-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-raft\3.7.1\kafka-raft-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\yammer\metrics\metrics-core\2.2.0\metrics-core-2.2.0.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server-common\3.7.1\kafka-server-common-3.7.1.jar;C:\Users\Usuario\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\Usuario\.m2\repository\org\pcollections\pcollections\4.0.1\pcollections-4.0.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server-common\3.7.1\kafka-server-common-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-streams-test-utils\3.7.1\kafka-streams-test-utils-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-streams\3.7.1\kafka-streams-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\rocksdb\rocksdbjni\7.9.2\rocksdbjni-7.9.2.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka_2.13\3.7.1\kafka_2.13-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\scala-library\2.13.12\scala-library-2.13.12.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-group-coordinator\3.7.1\kafka-group-coordinator-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-storage-api\3.7.1\kafka-storage-api-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-tools-api\3.7.1\kafka-tools-api-3.7.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-storage\3.7.1\kafka-storage-3.7.1.jar;C:\Users\Usuario\.m2\repository\com\github\ben-manes\caffeine\caffeine\3.1.8\caffeine-3.1.8.jar;C:\Users\Usuario\.m2\repository\com\google\errorprone\error_prone_annotations\2.21.1\error_prone_annotations-2.21.1.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka-server\3.7.1\kafka-server-3.7.1.jar;C:\Users\Usuario\.m2\repository\net\sourceforge\argparse4j\argparse4j\0.7.0\argparse4j-0.7.0.jar;C:\Users\Usuario\.m2\repository\commons-validator\commons-validator\1.7\commons-validator-1.7.jar;C:\Users\Usuario\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\Usuario\.m2\repository\commons-digester\commons-digester\2.1\commons-digester-2.1.jar;C:\Users\Usuario\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\module\jackson-module-scala_2.13\2.17.2\jackson-module-scala_2.13-2.17.2.jar;C:\Users\Usuario\.m2\repository\com\thoughtworks\paranamer\paranamer\2.8\paranamer-2.8.jar;C:\Users\Usuario\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-csv\2.17.2\jackson-dataformat-csv-2.17.2.jar;C:\Users\Usuario\.m2\repository\org\bitbucket\b_c\jose4j\0.9.4\jose4j-0.9.4.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\modules\scala-collection-compat_2.13\2.10.0\scala-collection-compat_2.13-2.10.0.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\1.0.2\scala-java8-compat_2.13-1.0.2.jar;C:\Users\Usuario\.m2\repository\org\scala-lang\scala-reflect\2.13.12\scala-reflect-2.13.12.jar;C:\Users\Usuario\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.4\scala-logging_2.13-3.9.4.jar;C:\Users\Usuario\.m2\repository\io\dropwizard\metrics\metrics-core\4.1.12.1\metrics-core-4.1.12.1.jar;C:\Users\Usuario\.m2\repository\commons-cli\commons-cli\1.4\commons-cli-1.4.jar;C:\Users\Usuario\.m2\repository\org\apache\kafka\kafka_2.13\3.7.1\kafka_2.13-3.7.1-test.jar;C:\Users\Usuario\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.3\junit-jupiter-api-5.10.3.jar;C:\Users\Usuario\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-commons\1.10.3\junit-platform-commons-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-launcher\1.10.3\junit-platform-launcher-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\junit\platform\junit-platform-engine\1.10.3\junit-platform-engine-1.10.3.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\junit-jupiter\1.21.4\junit-jupiter-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\postgresql\1.21.4\postgresql-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\jdbc\1.21.4\jdbc-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\database-commons\1.21.4\database-commons-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\mongodb\1.21.4\mongodb-1.21.4.jar;C:\Users\Usuario\.m2\repository\org\testcontainers\kafka\1.21.4\kafka-1.21.4.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Usuario"/>
+    <property name="user.language" value="pt"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="reactor.schedulers.defaultBoundedElasticOnVirtualThreads" value="true"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.home" value="C:\Users\Usuario\Downloads\jdk\jdk-21.0.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Usuario\Downloads\clearsettle-engine"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="FILE_LOG_CHARSET" value="UTF-8"/>
+    <property name="java.awt.headless" value="true"/>
+    <property name="surefire.real.class.path" value="C:\Users\Usuario\AppData\Local\Temp\surefire6557579291562760160\surefirebooter-20260811132216701_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="21.0.9+7-LTS-338"/>
+    <property name="user.name" value="Usuario"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Usuario\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Usuario\AppData\Local\Temp\"/>
+    <property name="catalina.home" value="C:\Users\Usuario\AppData\Local\Temp\tomcat.0.7607245756122075454"/>
+    <property name="com.zaxxer.hikari.pool_number" value="1"/>
+    <property name="java.version" value="21.0.9"/>
+    <property name="user.dir" value="C:\Users\Usuario\Downloads\clearsettle-engine"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="PID" value="1164"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
+    <property name="catalina.base" value="C:\Users\Usuario\AppData\Local\Temp\tomcat.0.7607245756122075454"/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Users\Usuario\Downloads\jdk\jdk-21.0.9\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python314\Scripts\;C:\Python314\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\Usuario\AppData\Local\Microsoft\WindowsApps;C:\Users\Usuario\AppData\Local\Android\Sdk\platform-tools;C:\Users\Usuario\AppData\Local\Python\bin;C:\Users\Usuario\Downloads\jdk\jdk-21.0.9\bin;C:\Users\Usuario\AppData\Roaming\npm;C:\Users\Usuario\Downloads\apache-maven\apache-maven-3.9.16\bin;;C:\Users\Usuario\AppData\Local\Programs\DockerDesktop\resources\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="21.0.9+7-LTS-338"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="65.0"/>
+    <property name="LOGGED_APPLICATION_NAME" value="[clearsettle-engine] "/>
+  </properties>
+  <testcase name="fullFlowIntegrationTest" classname="com.eduardoponciano.clearsettle.infrastructure.adapter.inbound.rest.SettlementIntegrationTest" time="2.508">
+    <system-out><![CDATA[13:22:20.170 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.eduardoponciano.clearsettle.infrastructure.adapter.inbound.rest.SettlementIntegrationTest]: SettlementIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+13:22:20.337 [main] INFO org.testcontainers.images.PullPolicy -- Image pull policy will be performed by: DefaultPullPolicy()
+13:22:20.344 [main] INFO org.testcontainers.utility.ImageNameSubstitutor -- Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+13:22:20.393 [main] INFO org.testcontainers.DockerClientFactory -- Testcontainers version: 1.21.4
+13:22:20.783 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+13:22:25.685 [main] INFO org.testcontainers.dockerclient.DockerClientProviderStrategy -- Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+13:22:25.687 [main] INFO org.testcontainers.DockerClientFactory -- Docker host IP address is localhost
+13:22:25.724 [main] INFO org.testcontainers.DockerClientFactory -- Connected to docker: 
+  Server Version: 29.7.2
+  API Version: 1.55
+  Operating System: Docker Desktop
+  Total Memory: 7882 MB
+  Labels: 
+    com.docker.desktop.address=npipe://\\.\pipe\docker_cli
+13:22:25.966 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Creating container for image: testcontainers/ryuk:0.12.0
+13:22:26.130 [main] INFO org.testcontainers.utility.RegistryAuthLocator -- Credential helper/store (docker-credential-desktop) does not have credentials for https://index.docker.io/v1/
+13:22:26.416 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 is starting: 67297d7ce08537c4d3ec3ab3f3b8b182918f90e6ce08c2adda1f9ce4f423cd1d
+13:22:27.038 [main] INFO tc.testcontainers/ryuk:0.12.0 -- Container testcontainers/ryuk:0.12.0 started in PT1.0721034S
+13:22:27.050 [main] INFO org.testcontainers.utility.RyukResourceReaper -- Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+13:22:27.050 [main] INFO org.testcontainers.DockerClientFactory -- Checking the system...
+13:22:27.052 [main] INFO org.testcontainers.DockerClientFactory -- ✔︎ Docker server version should be at least 1.6.0
+13:22:27.314 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.eduardoponciano.clearsettle.ClearSettleApplication for test class com.eduardoponciano.clearsettle.infrastructure.adapter.inbound.rest.SettlementIntegrationTest
+13:22:27.495 [main] INFO tc.confluentinc/cp-kafka:7.6.0 -- Creating container for image: confluentinc/cp-kafka:7.6.0
+13:22:27.614 [main] INFO tc.confluentinc/cp-kafka:7.6.0 -- Container confluentinc/cp-kafka:7.6.0 is starting: 43a9c89e0da85383a9d425fe8bcea4b0073a1d31cac3f968fae4a7f4fc8e05ef
+13:22:35.883 [main] INFO tc.confluentinc/cp-kafka:7.6.0 -- Container confluentinc/cp-kafka:7.6.0 started in PT8.3888105S
+13:22:35.884 [main] INFO tc.mongo:7.0 -- Creating container for image: mongo:7.0
+13:22:36.077 [main] INFO tc.mongo:7.0 -- Container mongo:7.0 is starting: c6ce3cca839bfa20727f7e0300d3d6caeb74f0a91ec32c86b04c5f1310e91a72
+13:22:37.688 [main] INFO tc.mongo:7.0 -- Container mongo:7.0 started in PT1.8042723S
+13:22:40.065 [main] INFO tc.postgres:16-alpine -- Creating container for image: postgres:16-alpine
+13:22:40.227 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine is starting: 214a70067e5c2ae0a9c6fe7ad8216a9324c58e0da65d3cd3fadb69e08120def8
+13:22:43.098 [main] INFO tc.postgres:16-alpine -- Container postgres:16-alpine started in PT3.0328326S
+13:22:43.100 [main] INFO tc.postgres:16-alpine -- Container is started (JDBC URL: jdbc:postgresql://localhost:63011/test?loggerLevel=OFF)
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.2)
+
+2026-08-11T13:22:43.892-03:00  INFO 1164 --- [clearsettle-engine] [           main] c.e.c.i.a.i.r.SettlementIntegrationTest  : Starting SettlementIntegrationTest using Java 21.0.9 with PID 1164 (started by Usuario in C:\Users\Usuario\Downloads\clearsettle-engine)
+2026-08-11T13:22:43.896-03:00  INFO 1164 --- [clearsettle-engine] [           main] c.e.c.i.a.i.r.SettlementIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2026-08-11T13:22:46.044-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-11T13:22:46.044-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-11T13:22:46.111-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interface.
+2026-08-11T13:22:46.115-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-08-11T13:22:46.116-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-08-11T13:22:46.126-03:00  INFO 1164 --- [clearsettle-engine] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 MongoDB repository interface.
+2026-08-11T13:22:49.208-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-08-11T13:22:49.237-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-08-11T13:22:49.241-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2026-08-11T13:22:49.431-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-08-11T13:22:49.434-03:00  INFO 1164 --- [clearsettle-engine] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5443 ms
+2026-08-11T13:22:50.416-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-11T13:22:50.598-03:00  INFO 1164 --- [clearsettle-engine] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2026-08-11T13:22:50.682-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-11T13:22:50.923-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-11T13:22:50.975-03:00  INFO 1164 --- [clearsettle-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-11T13:22:51.259-03:00  INFO 1164 --- [clearsettle-engine] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@18bab95b
+2026-08-11T13:22:51.262-03:00  INFO 1164 --- [clearsettle-engine] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-11T13:22:53.610-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: create table settlements (transaction_id uuid not null, amount numeric(38,2), created_at timestamp(6) with time zone, currency varchar(255), customer_id uuid, merchant_id uuid, processed_at timestamp(6) with time zone, status varchar(255) check (status in ('PENDING','COMPLETED','FAILED')), primary key (transaction_id))
+2026-08-11T13:22:53.727-03:00  INFO 1164 --- [clearsettle-engine] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-11T13:22:55.196-03:00  INFO 1164 --- [clearsettle-engine] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.9+7-LTS-338"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@b729651], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@15c46930, com.mongodb.Jep395RecordCodecProvider@2c635953, com.mongodb.KotlinCodecProvider@547ef1c6]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:63010], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@3b76dfa6], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2026-08-11T13:22:55.267-03:00  INFO 1164 --- [clearsettle-engine] [localhost:63010] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:63010, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=93615900, setName='docker-rs', canonicalAddress=c6ce3cca839b:27017, hosts=[c6ce3cca839b:27017], passives=[], arbiters=[], primary='c6ce3cca839b:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000001, setVersion=1, topologyVersion=TopologyVersion{processId=6a7b4c4ca4fd6f3a4238c0a0, counter=6}, lastWriteDate=Tue Aug 11 13:22:39 BRT 2026, lastUpdateTimeNanos=56576156505800}
+2026-08-11T13:22:57.290-03:00  WARN 1164 --- [clearsettle-engine] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-08-11T13:22:58.797-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-08-11T13:22:59.161-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.clients.admin.AdminClientConfig    : AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.controllers = []
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	client.dns.lookup = use_all_dns_ips
+	client.id = clearsettle-engine-admin-0
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	enable.metrics.push = true
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2026-08-11T13:22:59.545-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:22:59.545-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:22:59.545-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465379543
+2026-08-11T13:23:00.900-03:00  INFO 1164 --- [clearsettle-engine] [-engine-admin-0] o.a.kafka.common.utils.AppInfoParser     : App info kafka.admin.client for clearsettle-engine-admin-0 unregistered
+2026-08-11T13:23:00.924-03:00  INFO 1164 --- [clearsettle-engine] [-engine-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2026-08-11T13:23:00.925-03:00  INFO 1164 --- [clearsettle-engine] [-engine-admin-0] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2026-08-11T13:23:00.925-03:00  INFO 1164 --- [clearsettle-engine] [-engine-admin-0] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2026-08-11T13:23:00.955-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 63030 (http) with context path '/'
+2026-08-11T13:23:01.021-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-settlement-group-dlt-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = settlement-group-dlt
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-11T13:23:01.157-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-11T13:23:01.287-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:23:01.287-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:23:01.287-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465381287
+2026-08-11T13:23:01.302-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Subscribed to topic(s): settlement-requested-dlt
+2026-08-11T13:23:01.319-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-settlement-group-retry-1-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = settlement-group-retry-1
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-11T13:23:01.319-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-11T13:23:01.362-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:23:01.363-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:23:01.363-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465381362
+2026-08-11T13:23:01.435-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Subscribed to topic(s): settlement-requested-retry-1
+2026-08-11T13:23:01.450-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-settlement-group-retry-0-3
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = settlement-group-retry-0
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-11T13:23:01.452-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-11T13:23:01.483-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Cluster ID: Hr0JUVdkS6mNFB4GrecRIg
+2026-08-11T13:23:01.517-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Cluster ID: Hr0JUVdkS6mNFB4GrecRIg
+2026-08-11T13:23:01.588-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:23:01.588-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:23:01.588-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465381588
+2026-08-11T13:23:01.647-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Subscribed to topic(s): settlement-requested-retry-0
+2026-08-11T13:23:01.671-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Discovered group coordinator localhost:63009 (id: 2147483646 rack: null)
+2026-08-11T13:23:01.699-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Discovered group coordinator localhost:63009 (id: 2147483646 rack: null)
+2026-08-11T13:23:01.699-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] (Re-)joining group
+2026-08-11T13:23:01.709-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] (Re-)joining group
+2026-08-11T13:23:01.728-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-settlement-group-4
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	enable.metrics.push = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = settlement-group
+	group.instance.id = null
+	group.protocol = classic
+	group.remote.assignor = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.springframework.kafka.support.serializer.JsonDeserializer
+
+2026-08-11T13:23:01.738-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-11T13:23:01.738-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Cluster ID: Hr0JUVdkS6mNFB4GrecRIg
+2026-08-11T13:23:01.738-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Discovered group coordinator localhost:63009 (id: 2147483646 rack: null)
+2026-08-11T13:23:01.739-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] (Re-)joining group
+2026-08-11T13:23:01.880-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:23:01.881-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:23:01.881-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465381880
+2026-08-11T13:23:01.891-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Request joining group due to: need to re-join with the given member-id: consumer-settlement-group-retry-1-2-9148c682-8274-4049-8a9d-482589d770ed
+2026-08-11T13:23:01.892-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] (Re-)joining group
+2026-08-11T13:23:01.897-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Request joining group due to: need to re-join with the given member-id: consumer-settlement-group-retry-0-3-72584c88-ce68-4ab9-8381-87ad177153ff
+2026-08-11T13:23:01.898-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] (Re-)joining group
+2026-08-11T13:23:01.898-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Request joining group due to: need to re-join with the given member-id: consumer-settlement-group-dlt-1-a9938ffd-5bbe-4783-956e-9071bba76364
+2026-08-11T13:23:01.899-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] (Re-)joining group
+2026-08-11T13:23:01.983-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Successfully joined group with generation Generation{generationId=1, memberId='consumer-settlement-group-retry-1-2-9148c682-8274-4049-8a9d-482589d770ed', protocol='range'}
+2026-08-11T13:23:01.984-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Successfully joined group with generation Generation{generationId=1, memberId='consumer-settlement-group-dlt-1-a9938ffd-5bbe-4783-956e-9071bba76364', protocol='range'}
+2026-08-11T13:23:01.984-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Successfully joined group with generation Generation{generationId=1, memberId='consumer-settlement-group-retry-0-3-72584c88-ce68-4ab9-8381-87ad177153ff', protocol='range'}
+2026-08-11T13:23:02.034-03:00  INFO 1164 --- [clearsettle-engine] [           main] o.a.k.c.c.internals.LegacyKafkaConsumer  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Subscribed to topic(s): settlement-requested
+2026-08-11T13:23:02.036-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Finished assignment for group at generation 1: {consumer-settlement-group-retry-1-2-9148c682-8274-4049-8a9d-482589d770ed=Assignment(partitions=[settlement-requested-retry-1-0])}
+2026-08-11T13:23:02.036-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Finished assignment for group at generation 1: {consumer-settlement-group-dlt-1-a9938ffd-5bbe-4783-956e-9071bba76364=Assignment(partitions=[settlement-requested-dlt-0])}
+2026-08-11T13:23:02.045-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Finished assignment for group at generation 1: {consumer-settlement-group-retry-0-3-72584c88-ce68-4ab9-8381-87ad177153ff=Assignment(partitions=[settlement-requested-retry-0-0])}
+2026-08-11T13:23:02.167-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Cluster ID: Hr0JUVdkS6mNFB4GrecRIg
+2026-08-11T13:23:02.168-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Discovered group coordinator localhost:63009 (id: 2147483646 rack: null)
+2026-08-11T13:23:02.169-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] (Re-)joining group
+2026-08-11T13:23:02.223-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Request joining group due to: need to re-join with the given member-id: consumer-settlement-group-4-4a5f7ad3-8ecb-4433-9fa1-310dd152c37d
+2026-08-11T13:23:02.224-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] (Re-)joining group
+2026-08-11T13:23:02.251-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Successfully synced group in generation Generation{generationId=1, memberId='consumer-settlement-group-retry-0-3-72584c88-ce68-4ab9-8381-87ad177153ff', protocol='range'}
+2026-08-11T13:23:02.252-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Notifying assignor about the new Assignment(partitions=[settlement-requested-retry-0-0])
+2026-08-11T13:23:02.266-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Successfully synced group in generation Generation{generationId=1, memberId='consumer-settlement-group-retry-1-2-9148c682-8274-4049-8a9d-482589d770ed', protocol='range'}
+2026-08-11T13:23:02.267-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Notifying assignor about the new Assignment(partitions=[settlement-requested-retry-1-0])
+2026-08-11T13:23:02.277-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Successfully synced group in generation Generation{generationId=1, memberId='consumer-settlement-group-dlt-1-a9938ffd-5bbe-4783-956e-9071bba76364', protocol='range'}
+2026-08-11T13:23:02.280-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Notifying assignor about the new Assignment(partitions=[settlement-requested-dlt-0])
+2026-08-11T13:23:02.295-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Adding newly assigned partitions: settlement-requested-retry-1-0
+2026-08-11T13:23:02.299-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Adding newly assigned partitions: settlement-requested-dlt-0
+2026-08-11T13:23:02.342-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Successfully joined group with generation Generation{generationId=1, memberId='consumer-settlement-group-4-4a5f7ad3-8ecb-4433-9fa1-310dd152c37d', protocol='range'}
+2026-08-11T13:23:02.343-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Finished assignment for group at generation 1: {consumer-settlement-group-4-4a5f7ad3-8ecb-4433-9fa1-310dd152c37d=Assignment(partitions=[settlement-requested-0])}
+2026-08-11T13:23:02.343-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Adding newly assigned partitions: settlement-requested-retry-0-0
+2026-08-11T13:23:02.403-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Successfully synced group in generation Generation{generationId=1, memberId='consumer-settlement-group-4-4a5f7ad3-8ecb-4433-9fa1-310dd152c37d', protocol='range'}
+2026-08-11T13:23:02.404-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Notifying assignor about the new Assignment(partitions=[settlement-requested-0])
+2026-08-11T13:23:02.404-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] k.c.c.i.ConsumerRebalanceListenerInvoker : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Adding newly assigned partitions: settlement-requested-0
+2026-08-11T13:23:02.444-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Found no committed offset for partition settlement-requested-dlt-0
+2026-08-11T13:23:02.447-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Found no committed offset for partition settlement-requested-retry-1-0
+2026-08-11T13:23:02.451-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Found no committed offset for partition settlement-requested-0
+2026-08-11T13:23:02.452-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Found no committed offset for partition settlement-requested-retry-0-0
+2026-08-11T13:23:02.515-03:00  INFO 1164 --- [clearsettle-engine] [           main] c.e.c.i.a.i.r.SettlementIntegrationTest  : Started SettlementIntegrationTest in 19.353 seconds (process running for 45.565)
+2026-08-11T13:23:02.516-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-settlement-group-dlt-1, groupId=settlement-group-dlt] Resetting offset for partition settlement-requested-dlt-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:63009 (id: 1 rack: null)], epoch=0}}.
+2026-08-11T13:23:02.516-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-settlement-group-retry-1-2, groupId=settlement-group-retry-1] Resetting offset for partition settlement-requested-retry-1-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:63009 (id: 1 rack: null)], epoch=0}}.
+2026-08-11T13:23:02.518-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-1] o.s.k.l.KafkaMessageListenerContainer    : settlement-group-dlt: partitions assigned: [settlement-requested-dlt-0]
+2026-08-11T13:23:02.540-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-2] o.s.k.l.KafkaMessageListenerContainer    : settlement-group-retry-1: partitions assigned: [settlement-requested-retry-1-0]
+2026-08-11T13:23:02.548-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-settlement-group-4, groupId=settlement-group] Resetting offset for partition settlement-requested-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:63009 (id: 1 rack: null)], epoch=0}}.
+2026-08-11T13:23:02.548-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.a.k.c.c.internals.SubscriptionState    : [Consumer clientId=consumer-settlement-group-retry-0-3, groupId=settlement-group-retry-0] Resetting offset for partition settlement-requested-retry-0-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:63009 (id: 1 rack: null)], epoch=0}}.
+2026-08-11T13:23:02.548-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-3] o.s.k.l.KafkaMessageListenerContainer    : settlement-group-retry-0: partitions assigned: [settlement-requested-retry-0-0]
+2026-08-11T13:23:02.550-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] o.s.k.l.KafkaMessageListenerContainer    : settlement-group: partitions assigned: [settlement-requested-0]
+2026-08-11T13:23:03.064-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-08-11T13:23:03.065-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-08-11T13:23:03.066-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-08-11T13:23:03.400-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [PLAINTEXT://localhost:63009]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = clearsettle-engine-producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	enable.metrics.push = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.max.ms = 1000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2026-08-11T13:23:03.402-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.k.c.t.i.KafkaMetricsCollector        : initializing Kafka metrics collector
+2026-08-11T13:23:03.420-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=clearsettle-engine-producer-1] Instantiated an idempotent producer.
+2026-08-11T13:23:03.478-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.7.1
+2026-08-11T13:23:03.478-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: e2494e6ffb89f828
+2026-08-11T13:23:03.478-03:00  INFO 1164 --- [clearsettle-engine] [omcat-handler-0] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1786465383478
+2026-08-11T13:23:03.497-03:00  INFO 1164 --- [clearsettle-engine] [gine-producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=clearsettle-engine-producer-1] Cluster ID: Hr0JUVdkS6mNFB4GrecRIg
+2026-08-11T13:23:03.642-03:00  INFO 1164 --- [clearsettle-engine] [gine-producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=clearsettle-engine-producer-1] ProducerId set to 0 with epoch 0
+2026-08-11T13:23:03.765-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] c.e.c.i.a.i.k.SettlementKafkaConsumer    : Received settlement request event: {transactionId=eef13fbf-9e11-4fd9-8468-4e68ad840d41, merchantId=1aba3b11-a89d-403a-a95f-6a293ac20197, amount=250.75, occurredAt=2026-08-11T16:23:02.704775800Z, currency=BRL, eventId=6bfa8c10-265a-408b-b148-a07b21e3177e, customerId=47585580-8196-49ab-b43d-239dd91579d7}
+Hibernate: select sje1_0.transaction_id,sje1_0.amount,sje1_0.created_at,sje1_0.currency,sje1_0.customer_id,sje1_0.merchant_id,sje1_0.processed_at,sje1_0.status from settlements sje1_0 where sje1_0.transaction_id=?
+Hibernate: select count(*) from settlements sje1_0 where sje1_0.transaction_id=?
+Hibernate: select sje1_0.transaction_id,sje1_0.amount,sje1_0.created_at,sje1_0.currency,sje1_0.customer_id,sje1_0.merchant_id,sje1_0.processed_at,sje1_0.status from settlements sje1_0 where sje1_0.transaction_id=?
+Hibernate: insert into settlements (amount,created_at,currency,customer_id,merchant_id,processed_at,status,transaction_id) values (?,?,?,?,?,?,?,?)
+Hibernate: select sje1_0.transaction_id,sje1_0.amount,sje1_0.created_at,sje1_0.currency,sje1_0.customer_id,sje1_0.merchant_id,sje1_0.processed_at,sje1_0.status from settlements sje1_0 where sje1_0.transaction_id=?
+Hibernate: update settlements set amount=?,created_at=?,currency=?,customer_id=?,merchant_id=?,processed_at=?,status=? where transaction_id=?
+2026-08-11T13:23:04.981-03:00  WARN 1164 --- [clearsettle-engine] [gine-producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=clearsettle-engine-producer-1] Error while fetching metadata with correlation id 8 : {settlement-completed=LEADER_NOT_AVAILABLE}
+Hibernate: select sje1_0.transaction_id,sje1_0.amount,sje1_0.created_at,sje1_0.currency,sje1_0.customer_id,sje1_0.merchant_id,sje1_0.processed_at,sje1_0.status from settlements sje1_0 where sje1_0.transaction_id=?
+2026-08-11T13:23:05.108-03:00  INFO 1164 --- [clearsettle-engine] [        kafka-4] c.e.c.a.u.ProcessSettlementService       : Settlement for transaction eef13fbf-9e11-4fd9-8468-4e68ad840d41 completed successfully
+]]></system-out>
+  </testcase>
+</testsuite>

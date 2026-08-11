@@ -1,0 +1,3 @@
+com\eduardoponciano\clearsettle\domain\model\SettlementTest.class
+com\eduardoponciano\clearsettle\infrastructure\adapter\inbound\rest\SettlementIntegrationTest.class
+com\eduardoponciano\clearsettle\application\usecase\ProcessSettlementServiceTest.class
